@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World - WebAssembly POC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Hello World: WebAssembly</h1>
+    <p>Proof of Concept (POC) for the Web Programming course</p>
+  </header>
+
+  <main>
+    <!-- ===== Card 1: Hello World in the browser ===== -->
+    <!-- The text comes from the memory of the hello.wasm module. -->
+    <section class="card">
+      <h2>🌐 Wasm in the browser</h2>
+      <p>The message below is stored inside <code>hello.wasm</code> and sent to JavaScript.</p>
+      <button id="btn-hello" disabled>Loading Wasm...</button>
+      <pre id="hello-result">Waiting...</pre>
+    </section>
+
+    <!-- ===== Card 2: calculation in Wasm ===== -->
+    <section class="card">
+      <h2>➕ Add with Wasm</h2>
+      <p>The sum is calculated by the exported Wasm function <code>add</code>.</p>
+      <div class="inputs">
+        <input type="number" id="num-a" value="5" />
+        <span>+</span>
+        <input type="number" id="num-b" value="7" />
+      </div>
+      <button id="btn-add" disabled>Loading Wasm...</button>
+      <pre id="add-result">Waiting...</pre>
+    </section>
+
+    <!-- ===== Card 3: the SAME .wasm file running on the server ===== -->
+    <section class="card">
+      <h2>🖥️ Wasm on the server</h2>
+      <p>The backend (Node.js) runs the same <code>hello.wasm</code> file and returns the result.</p>
+      <button id="btn-backend">Call backend</button>
+      <pre id="backend-result">Press the button...</pre>
+    </section>
+  </main>
+
+  <footer>One .wasm file · runs in the browser and on the server</footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

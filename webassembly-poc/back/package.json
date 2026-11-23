@@ -1,0 +1,14 @@
+{
+  "name": "wasm-poc-backend",
+  "version": "1.0.0",
+  "description": "Node.js server that serves the frontend and runs hello.wasm on the server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/server.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
